@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 50%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-wrapper {
+    width: 100%;
+    max-width: 1240px;
+    height: 40px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    font-size: 42px;
+}
+.settings {
+    margin-left: 20px;
+    display: flex;
+}
+.setting-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    mask-image: url('img/add.svg');
+}
+.setting-button img {
+    height: 100%;
+}
+.active-mode {
+    position: relative;
+}
+.active-mode::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    border: 2px solid white;
+    margin: 0 auto;
+    left: -2.5px;
+    right: 0;
+    bottom: -10px;
+}
+
+
+
+section {
+    width: 100%;
+    max-width: 1240px;
+    margin:  20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+    font-size: 30px;
+}
+.tasks-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.task {
+    width: 100%;
+    margin-top: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.completed-task {
+    border-color:  green;
+}
+.failed-task {
+    border-color:  red;
+}
+.completed {
+    color: green;
+}
+.failed {
+    color: red;
+}
+.main-goal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+.btn-status {
+    width: 20px;
+    height: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.btn-status-completed {
+    background-color: green;
+}
+.btn-status-failed {
+    background-color: red;
+}
+.main-goal p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: 0;
+}
+.btn-editTask {
+    height: 40px;
+    width: 60px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: orange;
+    margin-left: auto;
+    margin-right: 10px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 2px solid darkgoldenrod;
+    cursor: pointer;
+    display: none;
+}
+.btn-delTask {
+    height: 40px;
+    width: 60px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: red;
+    margin-right: 20px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 2px solid darkred;
+    cursor: pointer;
+    display: none;
+}
+.sub-task {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.sub-task .btn-status {
+    margin-left: 15%;
+    margin-right: 10%;
+}
+.sub-task p {
+    margin-right: auto;
+    margin-left: 0;
+}
+.popup-subslist {
+    width: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.popup-subtask {
+    max-width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5%;
+}
+.popup-subtask p {
+    margin-left: 5px;
+}
+.sub-del {
+    padding: 0 5px;
+    color: white;
+    text-align: center;
+    background-color: red;
+    border-radius: 5px;
+    border: 2px solid darkred;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 40px;
+}
+.mode {
+    display: block;
+}
+
+
+
+footer {
+    width: 100%;
+    height: 80px;
+    margin-top: auto;
+    margin-bottom: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(32,32,32,1) 50%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-wrapper {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: end;
+}
+a {
+    color: lightgray;
+}
+
+.popup-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #151429d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup {
+    width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+}
+.popup-title {
+    font-size: 22px;
+}
+.popup-close {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.popup-input--maintask {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.popup-input--maintask p {
+    margin-left: 10px;
+    font-size: 18px;
+}
+.add-sub-task {
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 15%;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.popup-done {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 2px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.disable {
+    display: none;
+}

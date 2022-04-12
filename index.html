@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do list</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-wrapper">
+                <h1>To Do list</h1>
+                <div class="settings">
+                    <button id="add-btn" class="setting-button add-btn"><img src="img/add.svg" alt=""></button>
+                    <button id="up-btn" class="setting-button up-btn"><img src="img/up.svg" alt=""></button>
+                </div>
+            </div>
+        </header>
+        <section>
+            <h2>Current tasks</h2>
+            <div id="tasks-list" class="tasks-list"></div>
+        </section>
+        <footer>
+            <div class="footer-wrapper">
+                <h3>GitHub: <a href="https://github.com/Fozlush">Fozlush</a></h3>
+            </div>
+        </footer>
+        <div id="popup-overlay" class="popup-overlay disable">
+            <div id="popup" class="popup"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
